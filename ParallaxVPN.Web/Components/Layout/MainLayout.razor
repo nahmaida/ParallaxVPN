@@ -1,23 +1,20 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
+<div class="theme-wrapper" data-theme="@CurrentTheme">
+    <div class="page">
+        <Navbar CurrentTheme="@CurrentTheme" OnThemeToggle="ToggleTheme" />
+        <main>
             @Body
-        </article>
-    </main>
+        </main>
+        <Footer />
+    </div>
 </div>
 
-<div id="blazor-error-ui" data-nosnippet>
-    An unhandled error has occurred.
-    <a href="." class="reload">Reload</a>
-    <span class="dismiss">🗙</span>
-</div>
+@code {
+    private string CurrentTheme { get; set; } = "dark-tech";
+
+    private void ToggleTheme()
+    {
+        CurrentTheme = CurrentTheme == "dark-tech" ? "minimal" : "dark-tech";
+    }
+}

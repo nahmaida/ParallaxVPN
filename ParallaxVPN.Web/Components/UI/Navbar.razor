@@ -1,0 +1,28 @@
+﻿<nav class="navbar">
+    <div class="container nav-container">
+        <a href="#" class="logo">
+            <div class="logo-icon">P<span>•</span></div>
+            <span class="logo-text">Parallax <strong>VPN</strong></span>
+        </a>
+
+        <div class="nav-menu">
+            <a href="#features" class="nav-link">Возможности</a>
+            <a href="#pricing" class="nav-link">Тарифы</a>
+            <a href="#" class="nav-link">Локации</a>
+            <a href="#" class="nav-link">Поддержка</a>
+        </div>
+
+        <div class="nav-actions">
+            <button class="btn btn-outline"><i class="fas fa-user"></i> Вход</button>
+            <button class="btn btn-primary"><i class="fas fa-rocket"></i> Начать</button>
+            <button class="theme-toggle" @onclick="OnThemeToggle">
+                <i class="fas @(CurrentTheme == "dark-tech" ? "fa-moon" : "fa-leaf")"></i>
+            </button>
+        </div>
+    </div>
+</nav>
+
+@code {
+    [Parameter] public string CurrentTheme { get; set; } = "dark-tech";
+    [Parameter] public EventCallback OnThemeToggle { get; set; }
+}
