@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallaxVPN.Web", "ParallaxVPN.Web\ParallaxVPN.Web.csproj", "{E8423909-E4CB-405F-B9C6-8C6159B03AE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallaxVPN.Domain", "ParallaxVPN.Domain\ParallaxVPN.Domain.csproj", "{0ACA1870-3DB3-4D4B-8716-AEB82E20DA7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallaxVPN.Infrastructure", "ParallaxVPN.Infrastructure\ParallaxVPN.Infrastructure.csproj", "{A32672E6-C9D5-4787-93AD-D388B3742CFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8423909-E4CB-405F-B9C6-8C6159B03AE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8423909-E4CB-405F-B9C6-8C6159B03AE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8423909-E4CB-405F-B9C6-8C6159B03AE5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E8423909-E4CB-405F-B9C6-8C6159B03AE5}.Debug|x64.Build.0 = Debug|Any CPU
+		{E8423909-E4CB-405F-B9C6-8C6159B03AE5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E8423909-E4CB-405F-B9C6-8C6159B03AE5}.Debug|x86.Build.0 = Debug|Any CPU
+		{E8423909-E4CB-405F-B9C6-8C6159B03AE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8423909-E4CB-405F-B9C6-8C6159B03AE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8423909-E4CB-405F-B9C6-8C6159B03AE5}.Release|x64.ActiveCfg = Release|Any CPU
+		{E8423909-E4CB-405F-B9C6-8C6159B03AE5}.Release|x64.Build.0 = Release|Any CPU
+		{E8423909-E4CB-405F-B9C6-8C6159B03AE5}.Release|x86.ActiveCfg = Release|Any CPU
+		{E8423909-E4CB-405F-B9C6-8C6159B03AE5}.Release|x86.Build.0 = Release|Any CPU
+		{0ACA1870-3DB3-4D4B-8716-AEB82E20DA7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ACA1870-3DB3-4D4B-8716-AEB82E20DA7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ACA1870-3DB3-4D4B-8716-AEB82E20DA7E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0ACA1870-3DB3-4D4B-8716-AEB82E20DA7E}.Debug|x64.Build.0 = Debug|Any CPU
+		{0ACA1870-3DB3-4D4B-8716-AEB82E20DA7E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0ACA1870-3DB3-4D4B-8716-AEB82E20DA7E}.Debug|x86.Build.0 = Debug|Any CPU
+		{0ACA1870-3DB3-4D4B-8716-AEB82E20DA7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ACA1870-3DB3-4D4B-8716-AEB82E20DA7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ACA1870-3DB3-4D4B-8716-AEB82E20DA7E}.Release|x64.ActiveCfg = Release|Any CPU
+		{0ACA1870-3DB3-4D4B-8716-AEB82E20DA7E}.Release|x64.Build.0 = Release|Any CPU
+		{0ACA1870-3DB3-4D4B-8716-AEB82E20DA7E}.Release|x86.ActiveCfg = Release|Any CPU
+		{0ACA1870-3DB3-4D4B-8716-AEB82E20DA7E}.Release|x86.Build.0 = Release|Any CPU
+		{A32672E6-C9D5-4787-93AD-D388B3742CFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A32672E6-C9D5-4787-93AD-D388B3742CFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A32672E6-C9D5-4787-93AD-D388B3742CFD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A32672E6-C9D5-4787-93AD-D388B3742CFD}.Debug|x64.Build.0 = Debug|Any CPU
+		{A32672E6-C9D5-4787-93AD-D388B3742CFD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A32672E6-C9D5-4787-93AD-D388B3742CFD}.Debug|x86.Build.0 = Debug|Any CPU
+		{A32672E6-C9D5-4787-93AD-D388B3742CFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A32672E6-C9D5-4787-93AD-D388B3742CFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A32672E6-C9D5-4787-93AD-D388B3742CFD}.Release|x64.ActiveCfg = Release|Any CPU
+		{A32672E6-C9D5-4787-93AD-D388B3742CFD}.Release|x64.Build.0 = Release|Any CPU
+		{A32672E6-C9D5-4787-93AD-D388B3742CFD}.Release|x86.ActiveCfg = Release|Any CPU
+		{A32672E6-C9D5-4787-93AD-D388B3742CFD}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
