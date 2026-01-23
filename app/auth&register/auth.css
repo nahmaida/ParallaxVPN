@@ -1,0 +1,516 @@
+/* auth.css */
+
+/* Общие стили для страниц аутентификации */
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, var(--color-bg-primary), var(--color-bg-secondary));
+}
+
+.auth-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.auth-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.auth-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--color-text-primary);
+}
+
+.auth-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.auth-card {
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.auth-form {
+    margin-bottom: 30px;
+}
+
+/* Стили формы */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+.form-label i {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+}
+
+.form-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.forgot-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.forgot-link:hover {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    color: var(--color-text-primary);
+    font-family: var(--font-family);
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(0, 220, 130, 0.1);
+}
+
+.form-input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    padding: 4px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.password-toggle:hover {
+    color: var(--color-accent);
+}
+
+.password-strength {
+    margin-top: 10px;
+}
+
+.strength-meter {
+    height: 4px;
+    background: var(--color-bg-secondary);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--color-error);
+    transition: width 0.3s, background 0.3s;
+}
+
+.strength-bar.weak {
+    width: 25%;
+    background: var(--color-error);
+}
+
+.strength-bar.fair {
+    width: 50%;
+    background: var(--color-warning);
+}
+
+.strength-bar.good {
+    width: 75%;
+    background: #ffb300;
+}
+
+.strength-bar.strong {
+    width: 100%;
+    background: var(--color-success);
+}
+
+.strength-text {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    text-align: right;
+}
+
+.password-requirements {
+    margin-top: 15px;
+    padding: 15px;
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+}
+
+.password-requirements p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-secondary);
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.password-requirements i {
+    color: var(--color-accent);
+}
+
+.password-requirements ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.password-requirements li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+.password-requirements li i {
+    font-size: 0.6rem;
+    color: var(--color-error);
+}
+
+.password-requirements li.valid i {
+    color: var(--color-success);
+}
+
+/* Чекбоксы */
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.checkbox-label input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-custom {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-border);
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.3s;
+    margin-top: 2px;
+}
+
+.checkbox-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: var(--color-accent);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom {
+    border-color: var(--color-accent);
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-custom::after {
+    opacity: 1;
+}
+
+.checkbox-text {
+    flex: 1;
+}
+
+.terms-link {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+/* Кнопки социальных сетей */
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-weight: 500;
+}
+
+.btn-social i {
+    font-size: 1.2rem;
+}
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: var(--color-text-secondary);
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+}
+
+.auth-divider span {
+    padding: 0 15px;
+    font-size: 0.9rem;
+}
+
+/* Сообщения об ошибках */
+.form-error {
+    color: var(--color-error);
+    font-size: 0.85rem;
+    margin-top: 6px;
+    min-height: 18px;
+}
+
+/* Футер формы */
+.auth-footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+.auth-footer p {
+    color: var(--color-text-secondary);
+    margin-bottom: 8px;
+}
+
+.auth-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+.auth-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+.auth-note i {
+    color: var(--color-accent);
+}
+
+/* Особенности аутентификации */
+.auth-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.auth-feature {
+    text-align: center;
+    padding: 25px;
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s;
+}
+
+.auth-feature:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+}
+
+.auth-feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+.auth-feature h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--color-text-primary);
+}
+
+.auth-feature p {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Преимущества регистрации */
+.register-benefits {
+    margin-top: 40px;
+}
+
+.register-benefits h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color-text-primary);
+    font-size: 1.8rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.benefit {
+    text-align: center;
+    padding: 25px;
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+}
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: #000;
+    font-size: 1.3rem;
+}
+
+.benefit h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--color-text-primary);
+}
+
+.benefit p {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .auth-title {
+        font-size: 2.2rem;
+    }
+    
+    .auth-card {
+        padding: 25px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .auth-features {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-title {
+        font-size: 1.8rem;
+    }
+    
+    .auth-card {
+        padding: 20px;
+    }
+    
+    .btn-large {
+        padding: 12px 20px;
+    }
+}

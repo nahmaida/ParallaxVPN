@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark-tech">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | Parallax VPN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">P<span>•</span></div>
+                <span class="logo-text">Parallax <strong>VPN</strong></span>
+            </a>
+            
+            <div class="nav-actions">
+                <a href="index.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> На главную
+                </a>
+                <a href="login.html" class="btn btn-outline">
+                    <i class="fas fa-sign-in-alt"></i> Вход
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="auth-container">
+        <div class="container">
+            <div class="auth-wrapper">
+                <div class="auth-header">
+                    <h1 class="auth-title">Регистрация в <span class="highlight">Parallax VPN</span></h1>
+                    <p class="auth-subtitle">Создайте аккаунт и получите 7 дней бесплатного доступа</p>
+                </div>
+                
+                <div class="auth-card">
+                    <form id="registerForm" class="auth-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">
+                                    <i class="fas fa-user"></i> Имя
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="firstName" 
+                                    name="firstName" 
+                                    class="form-input"
+                                    placeholder="Ваше имя"
+                                    required
+                                >
+                                <div class="form-error" id="firstNameError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">
+                                    <i class="fas fa-user"></i> Фамилия
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="lastName" 
+                                    name="lastName" 
+                                    class="form-input"
+                                    placeholder="Ваша фамилия"
+                                >
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                <i class="fas fa-envelope"></i> Email адрес
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input"
+                                placeholder="your@email.com"
+                                required
+                            >
+                            <div class="form-error" id="emailError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password" class="form-label">
+                                <i class="fas fa-lock"></i> Пароль
+                            </label>
+                            <div class="password-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    class="form-input"
+                                    placeholder="Создайте надежный пароль"
+                                    required
+                                >
+                                <button type="button" class="password-toggle" id="passwordToggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="password-strength">
+                                <div class="strength-meter">
+                                    <div class="strength-bar" id="strengthBar"></div>
+                                </div>
+                                <div class="strength-text" id="strengthText">Слабый пароль</div>
+                            </div>
+                            <div class="password-requirements">
+                                <p><i class="fas fa-info-circle"></i> Пароль должен содержать:</p>
+                                <ul>
+                                    <li id="reqLength"><i class="fas fa-circle"></i> Минимум 8 символов</li>
+                                    <li id="reqUpper"><i class="fas fa-circle"></i> Заглавную букву</li>
+                                    <li id="reqNumber"><i class="fas fa-circle"></i> Цифру</li>
+                                    <li id="reqSpecial"><i class="fas fa-circle"></i> Специальный символ</li>
+                                </ul>
+                            </div>
+                            <div class="form-error" id="passwordError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword" class="form-label">
+                                <i class="fas fa-lock"></i> Подтверждение пароля
+                            </label>
+                            <div class="password-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="confirmPassword" 
+                                    name="confirmPassword" 
+                                    class="form-input"
+                                    placeholder="Повторите пароль"
+                                    required
+                                >
+                                <button type="button" class="password-toggle" id="confirmPasswordToggle">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="form-error" id="confirmPasswordError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">
+                                    Я принимаю <a href="#" class="terms-link">Условия использования</a> и 
+                                    <a href="#" class="terms-link">Политику конфиденциальности</a>
+                                </span>
+                            </label>
+                            <div class="form-error" id="termsError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter" checked>
+                                <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">
+                                    Получать новости и специальные предложения от Parallax VPN
+                                </span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block btn-large">
+                            <i class="fas fa-rocket"></i> Создать аккаунт
+                        </button>
+                        
+                        <div class="auth-divider">
+                            <span>или</span>
+                        </div>
+                        
+                        <button type="button" class="btn btn-outline btn-block btn-social">
+                            <i class="fab fa-google"></i> Зарегистрироваться через Google
+                        </button>
+                        
+                        <!-- <button type="button" class="btn btn-outline btn-block btn-social">
+                            <i class="fab fa-github"></i> Зарегистрироваться через GitHub
+                        </button> -->
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p>Уже есть аккаунт? <a href="login.html" class="auth-link">Войти</a></p>
+                    </div>
+                </div>
+                
+                <!-- <div class="register-benefits">
+                    <h3>Что вы получаете после регистрации:</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit">
+                            <div class="benefit-icon">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <h4>7 дней бесплатно</h4>
+                            <p>Полный доступ ко всем функциям на неделю</p>
+                        </div>
+                        
+                        <div class="benefit">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Защита данных</h4>
+                            <p>Ваши персональные данные под защитой</p>
+                        </div>
+                        
+                        <div class="benefit">
+                            <div class="benefit-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4>Поддержка 24/7</h4>
+                            <p>Круглосуточная помощь от нашей команды</p>
+                        </div>
+                        
+                        <div class="benefit">
+                            <div class="benefit-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>Доступ на всех устройствах</h4>
+                            <p>Используйте VPN на 5 устройствах одновременно</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer auth-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">P<span>•</span></div>
+                        <span class="logo-text">Parallax <strong>VPN</strong></span>
+                    </a>
+                    <p>Защита приватности в цифровую эпоху. С 2026 года.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Поддержка</h4>
+                        <a href="#">Центр помощи</a>
+                        <a href="#">Восстановление доступа</a>
+                        <a href="#">Контакты</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Безопасность</h4>
+                        <a href="#">Политика конфиденциальности</a>
+                        <a href="#">Условия использования</a>
+                        <a href="#">Сертификаты безопасности</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 Parallax VPN. Все права защищены.</div>
+                <div class="footer-legal">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
