@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark-tech">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax VPN | Защита и свобода в сети</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">P<span>•</span></div>
+                <span class="logo-text">Parallax <strong>VPN</strong></span>
+            </a>
+            
+            <div class="nav-menu">
+                <a href="#" class="nav-link">Возможности</a>
+                <a href="#" class="nav-link">Серверы</a>
+                <a href="#" class="nav-link">Тарифы</a>
+                <a href="#" class="nav-link">Поддержка</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn-outline"><i class="fas fa-user"></i> Вход</button>
+                <button class="btn btn-primary"><i class="fas fa-rocket"></i> Начать</button>
+                <!-- <button class="theme-toggle" id="themeToggle"> -->
+                    <!-- <i class="fas fa-moon"></i> -->
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Ваша приватность — наш <span class="highlight">приоритет</span></h1>
+                <p class="hero-subtitle">Скорость, безопасность и анонимность в одной подписке. Подключайтесь к лучшему VPN и пользуетесь интернетом без ограничений!</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">&gt;1</div>
+                        <div class="stat-label">сервер</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value2">∞</div>
+                        <div class="stat-label">трафик</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">месяц</div>
+                        <div class="stat-label">срок</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">&lt;3 Гбит/с</div>
+                        <div class="stat-label">скорость</div>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-large">
+                        <i class="fas fa-shield-alt"></i> Начать за 100₽/мес
+                    </button>
+                    <button class="btn btn-outline btn-large">
+                        <i class="fas fa-play-circle"></i> Как это работает
+                    </button>
+                </div>
+                
+                <div class=""> <!-- connection-status -->
+                    <!-- <div class="status-indicator connected"></div> -->
+                    <!-- <span>Текущий статус: <strong>Защищено</strong></span> -->
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="globe-container">
+                    <div class="globe"></div>
+                    <div class="connection-line line-1"></div>
+                    <div class="connection-line line-2"></div>
+                    <div class="connection-line line-3"></div>
+                    <div class="server-marker" style="top:40%; left:50%;"><span>🇩🇪 Германия</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Почему <span class="highlight">Parallax VPN</span>?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Молниеносная скорость</h3>
+                    <p>Оптимизированный серверы без ограничения скорости и рунета для потокового вещания и игр.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Военная защита</h3>
+                    <p>Шифрование AES-256, нулевая логика и защита от утечек DNS.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Глобальный доступ</h3>
+                    <p>Сервер для доступа к контенту со всего мира.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-house"></i>
+                    </div>
+                    <h3>Для всех устройств</h3>
+                    <p>Приложения для Windows, macOS, iOS, Android, Linux и расширения для браузеров.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Тарифы -->
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title">Выберите свой <span class="highlight">план</span></h2>
+            <p class="section-subtitle">Все планы включают полный доступ ко всем функциям и серверам</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Месячный</h3>
+                        <div class="price">130₽<span>/месяц</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Все серверы</li>
+                        <li><i class="fas fa-check"></i> одно подключение</li>
+                        <li><i class="fas fa-check"></i> Поддержка</li>
+                        <li><i class="fas fa-check"></i> Безлимитный трафик</li>
+                    </ul>
+                    <button class="btn btn-outline btn-block">Выбрать план</button>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="popular-badge">ВЫГОДНО</div>
+                    <div class="pricing-header">
+                        <h3>Годовой</h3>
+                        <div class="price">89₽<span>/месяц</span></div>
+                        <div class="billing-info">1068₽ ежегодно</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Все серверы</li>
+                        <li><i class="fas fa-check"></i> 2 одновременных подключений</li>
+                        <li><i class="fas fa-check"></i> Приоритетная поддержка 24/7</li>
+                        <li><i class="fas fa-check"></i> Безлимитный трафик</li>
+                        <!-- <li><i class="fas fa-check"></i> Защита от рекламы и майнеров</li> -->
+                    </ul>
+                    <button class="btn btn-primary btn-block"><i class="fas fa-rocket"></i> Начать сейчас</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>полугодовой</h3>
+                        <div class="price">99₽<span>/месяц</span></div>
+                        <div class="billing-info">594₽ ежегодно</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Все серверы</li>
+                        <li><i class="fas fa-check"></i> 2 одновременных подключений</li>
+                        <li><i class="fas fa-check"></i> Приоритетная поддержка</li>
+                        <li><i class="fas fa-check"></i> Безлимитный трафик</li> 
+                    </ul>
+                    <button class="btn btn-outline btn-block">Выбрать план</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">P<span>•</span></div>
+                        <span class="logo-text">Parallax <strong>VPN</strong></span>
+                    </a>
+                    <p>Защита приватности в цифровую эпоху. С 2026 года.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Продукт</h4>
+                        <a href="#">Возможности</a>
+                        <a href="#">Локации</a>
+                        <a href="#">Тарифы</a>
+                        <a href="#">Приложения</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Поддержка</h4>
+                        <a href="#">Центр помощи</a>
+                        <a href="#">Инструкции</a>
+                        <a href="#">Сообщество</a>
+                        <a href="#">Контакты</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Компания</h4>
+                        <a href="#">О нас</a>
+                        <a href="#">Блог</a>
+                        <a href="#">Вакансии</a>
+                        <a href="#">Партнерство</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 Parallax VPN. Все права защищены.</div>
+                <div class="footer-legal">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                    <a href="#">Политика возврата</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
